@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umberto in Fabula - Tabellone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Umberto in Fabula</h1>
+        <p>Clicca sulla tua carta per vedere la descrizione del ruolo</p>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link active">Tabellone</a>
+            <a href="regole.html" class="nav-link">Regole</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="card-grid">
+            <!-- Coppe (Cups) -->
+            <div class="suit-section">
+                <h2>Coppe</h2>
+                <div class="cards-row">
+                    <div class="card" data-suit="coppe" data-value="asso" onclick="showCard('coppe', 'asso')">
+                        <div class="card-content">
+                            <img src="cards/coppe/11_Asso_di_coppe.jpg" alt="Asso di Coppe" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="coppe" data-value="2" onclick="showCard('coppe', '2')">
+                        <div class="card-content">
+                            <img src="cards/coppe/12_Due_di_coppe.jpg" alt="Due di Coppe" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="coppe" data-value="3" onclick="showCard('coppe', '3')">
+                        <div class="card-content">
+                            <img src="cards/coppe/13_Tre_di_coppe.jpg" alt="Tre di Coppe" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="coppe" data-value="4" onclick="showCard('coppe', '4')">
+                        <div class="card-content">
+                            <img src="cards/coppe/14_Quattro_di_coppe.jpg" alt="Quattro di Coppe" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="coppe" data-value="5" onclick="showCard('coppe', '5')">
+                        <div class="card-content">
+                            <img src="cards/coppe/15_Cinque_di_coppe.jpg" alt="Cinque di Coppe" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="coppe" data-value="6" onclick="showCard('coppe', '6')">
+                        <div class="card-content">
+                            <img src="cards/coppe/16_Sei_di_coppe.jpg" alt="Sei di Coppe" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="coppe" data-value="7" onclick="showCard('coppe', '7')">
+                        <div class="card-content">
+                            <img src="cards/coppe/17_Sette_di_coppe.jpg" alt="Sette di Coppe" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="coppe" data-value="8" onclick="showCard('coppe', '8')">
+                        <div class="card-content">
+                            <img src="cards/coppe/18_Otto_di_coppe.jpg" alt="Otto di Coppe" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="coppe" data-value="9" onclick="showCard('coppe', '9')">
+                        <div class="card-content">
+                            <img src="cards/coppe/19_Nove_di_coppe.jpg" alt="Nove di Coppe" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="coppe" data-value="10" onclick="showCard('coppe', '10')">
+                        <div class="card-content">
+                            <img src="cards/coppe/20_Dieci_di_coppe.jpg" alt="Dieci di Coppe" class="card-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Denari (Coins) -->
+            <div class="suit-section">
+                <h2>Denari</h2>
+                <div class="cards-row">
+                    <div class="card" data-suit="denari" data-value="asso" onclick="showCard('denari', 'asso')">
+                        <div class="card-content">
+                            <img src="cards/denari/01_Asso_di_denari.jpg" alt="Asso di Denari" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="denari" data-value="2" onclick="showCard('denari', '2')">
+                        <div class="card-content">
+                            <img src="cards/denari/02_Due_di_denari.jpg" alt="Due di Denari" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="denari" data-value="3" onclick="showCard('denari', '3')">
+                        <div class="card-content">
+                            <img src="cards/denari/03_Tre_di_denari.jpg" alt="Tre di Denari" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="denari" data-value="4" onclick="showCard('denari', '4')">
+                        <div class="card-content">
+                            <img src="cards/denari/04_Quattro_di_denari.jpg" alt="Quattro di Denari" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="denari" data-value="5" onclick="showCard('denari', '5')">
+                        <div class="card-content">
+                            <img src="cards/denari/05_Cinque_di_denari.jpg" alt="Cinque di Denari" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="denari" data-value="6" onclick="showCard('denari', '6')">
+                        <div class="card-content">
+                            <img src="cards/denari/06_Sei_di_denari.jpg" alt="Sei di Denari" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="denari" data-value="7" onclick="showCard('denari', '7')">
+                        <div class="card-content">
+                            <img src="cards/denari/07_Sette_di_denari.jpg" alt="Sette di Denari" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="denari" data-value="8" onclick="showCard('denari', '8')">
+                        <div class="card-content">
+                            <img src="cards/denari/08_Otto_di_denari.jpg" alt="Otto di Denari" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="denari" data-value="9" onclick="showCard('denari', '9')">
+                        <div class="card-content">
+                            <img src="cards/denari/09_Nove_di_denari.jpg" alt="Nove di Denari" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="denari" data-value="10" onclick="showCard('denari', '10')">
+                        <div class="card-content">
+                            <img src="cards/denari/10_Dieci_di_denari.jpg" alt="Dieci di Denari" class="card-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bastoni (Clubs) -->
+            <div class="suit-section">
+                <h2>Bastoni</h2>
+                <div class="cards-row">
+                    <div class="card" data-suit="bastoni" data-value="asso" onclick="showCard('bastoni', 'asso')">
+                        <div class="card-content">
+                            <img src="cards/bastoni/31_Asso_di_bastoni.jpg" alt="Asso di Bastoni" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="bastoni" data-value="2" onclick="showCard('bastoni', '2')">
+                        <div class="card-content">
+                            <img src="cards/bastoni/32_Due_di_bastoni.jpg" alt="Due di Bastoni" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="bastoni" data-value="3" onclick="showCard('bastoni', '3')">
+                        <div class="card-content">
+                            <img src="cards/bastoni/33_Tre_di_bastoni.jpg" alt="Tre di Bastoni" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="bastoni" data-value="4" onclick="showCard('bastoni', '4')">
+                        <div class="card-content">
+                            <img src="cards/bastoni/34_Quattro_di_bastoni.jpg" alt="Quattro di Bastoni" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="bastoni" data-value="5" onclick="showCard('bastoni', '5')">
+                        <div class="card-content">
+                            <img src="cards/bastoni/35_Cinque_di_bastoni.jpg" alt="Cinque di Bastoni" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="bastoni" data-value="6" onclick="showCard('bastoni', '6')">
+                        <div class="card-content">
+                            <img src="cards/bastoni/36_Sei_di_bastoni.jpg" alt="Sei di Bastoni" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="bastoni" data-value="7" onclick="showCard('bastoni', '7')">
+                        <div class="card-content">
+                            <img src="cards/bastoni/37_Sette_di_bastoni.jpg" alt="Sette di Bastoni" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="bastoni" data-value="8" onclick="showCard('bastoni', '8')">
+                        <div class="card-content">
+                            <img src="cards/bastoni/38_Otto_di_bastoni.jpg" alt="Otto di Bastoni" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="bastoni" data-value="9" onclick="showCard('bastoni', '9')">
+                        <div class="card-content">
+                            <img src="cards/bastoni/39_Nove_di_bastoni.jpg" alt="Nove di Bastoni" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="bastoni" data-value="10" onclick="showCard('bastoni', '10')">
+                        <div class="card-content">
+                            <img src="cards/bastoni/40_Dieci_di_Bastoni.jpg" alt="Dieci di Bastoni" class="card-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spade (Swords) -->
+            <div class="suit-section">
+                <h2>Spade</h2>
+                <div class="cards-row">
+                    <div class="card" data-suit="spade" data-value="asso" onclick="showCard('spade', 'asso')">
+                        <div class="card-content">
+                            <img src="cards/spade/21_Asso_di_spade.jpg" alt="Asso di Spade" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="spade" data-value="2" onclick="showCard('spade', '2')">
+                        <div class="card-content">
+                            <img src="cards/spade/22_Due_di_spade.jpg" alt="Due di Spade" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="spade" data-value="3" onclick="showCard('spade', '3')">
+                        <div class="card-content">
+                            <img src="cards/spade/23_Tre_di_spade.jpg" alt="Tre di Spade" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="spade" data-value="4" onclick="showCard('spade', '4')">
+                        <div class="card-content">
+                            <img src="cards/spade/24_Quattro_di_spade.jpg" alt="Quattro di Spade" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="spade" data-value="5" onclick="showCard('spade', '5')">
+                        <div class="card-content">
+                            <img src="cards/spade/25_Cinque_di_spade.jpg" alt="Cinque di Spade" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="spade" data-value="6" onclick="showCard('spade', '6')">
+                        <div class="card-content">
+                            <img src="cards/spade/26_Sei_di_spade.jpg" alt="Sei di Spade" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="spade" data-value="7" onclick="showCard('spade', '7')">
+                        <div class="card-content">
+                            <img src="cards/spade/27_Sette_di_spade.jpg" alt="Sette di Spade" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="spade" data-value="8" onclick="showCard('spade', '8')">
+                        <div class="card-content">
+                            <img src="cards/spade/28_Otto_di_spade.jpg" alt="Otto di Spade" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="spade" data-value="9" onclick="showCard('spade', '9')">
+                        <div class="card-content">
+                            <img src="cards/spade/29_Nove_di_spade.jpg" alt="Nove di Spade" class="card-image">
+                        </div>
+                    </div>
+                    <div class="card" data-suit="spade" data-value="10" onclick="showCard('spade', '10')">
+                        <div class="card-content">
+                            <img src="cards/spade/30_Dieci_di_spade.jpg" alt="Dieci di Spade" class="card-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
