@@ -346,6 +346,9 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (roleData.team === 'NESSUNO') {
                 card.classList.add('role-grey');
             }
+        } else {
+            // Add visual hint for cards without roles
+            card.classList.add('no-role');
         }
         
         card.addEventListener('click', function() {

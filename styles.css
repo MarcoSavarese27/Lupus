@@ -201,6 +201,25 @@ main {
     background: linear-gradient(145deg, #f8f9fa, rgba(108, 117, 125, 0.2));
 }
 
+/* Visual hint for roleless cards */
+.card.no-role {
+    opacity: 0.5;
+    filter: grayscale(50%);
+    cursor: default;
+    transform: none !important;
+}
+
+.card.no-role:hover {
+    transform: none !important;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.card.no-role:active {
+    transform: none !important;
+    border-color: transparent;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+}
+
 /* Default active state for cards without roles */
 .card:active {
     border-color: #ddd;
