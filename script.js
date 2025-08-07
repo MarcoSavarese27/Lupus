@@ -30,6 +30,20 @@ const cardRoles = {
             team: "BUONI",
             info: "Ruolo di coppia (idenarin coppia con il 7 di denari). La prima notte entrambi gli amanti si sveglieranno per conoscersi.<br><br>• Se uno dei due amanti VIENE ELIMINATO TRAMITE VOTAZIONI, il secondo amante morirà la notte successiva;<br><br>• Se uno dei due amanti VIENE UCCISO DI NOTTE, all'altro amante verrà indicato l'uccisore, dopodiché giocherà come CONTADINO mantenendo tuttavia il ruolo di AMANTE",
             objective: "A fine partita, ENTRAMBI gli amanti devono essere in vita."
+        },
+        9: {
+            name: "Nove di Coppe",
+            role: "Giullare",
+            team: "NEUTRI",
+            info: "Non ha poteri.",
+            objective: "Deve farsi eliminare tramite VOTAZIONE dagli altri giocatori."
+        },
+        10: {
+            name: "Dieci di Coppe",
+            role: "Il Matto",
+            team: "NESSUNO",
+            info: "Questo ruolo è considerato come <span class=\"team-neutral\">NEUTRO</span>.<br><br>Quando viene eliminato si attiverà casualmente uno di questi effetti:<br><br>1. Nessun effetto;<br>2. Ruba la carta di un giocatore casuale;<br>3. Ruba la carta di un giocatore a scelta;<br>4. Sceglie una carta dal mazzo degli eliminati;<br>5. Inverte <span class=\"team-good\">CONTADINI</span> e <span class=\"team-evil\">LUPI</span>;<br>6. Il giocatore sopravvive e tutte le carte ruolo (ad eccezione de <span class=\"team-grey\">IL MATTO</span>) vengono riconsegnate, mescolate e ridistribuite ai giocatori ancora vivi.",
+            objective: "Essere mattissimo"
         }
     },
     denari: {
@@ -106,6 +120,13 @@ const cardRoles = {
             info: "UNA VOLTA PER NOTTE, verranno svegliati dal Narratore. Di comune accordo sceglieranno un giocatore da eliminare.",
             objective: "Il numero di <span class=\"team-evil\">LUPI</span> vivi deve essere la metà dei giocatori restanti."
         },
+        2: {
+            name: "Due di Bastoni",
+            role: "Lupo Solitario",
+            team: "NEUTRI",
+            info: "Una volta OGNI 2 NOTTI, a partire dalla seconda notte, può scegliere un bersaglio che verrà ucciso. Il lupo solitario IGNORA eventuali scudi.",
+            objective: "Eliminare tutti i <span class=\"team-evil\">LUPI</span>."
+        },
         4: {
             name: "Quattro di Bastoni",
             role: "Contadino",
@@ -119,6 +140,21 @@ const cardRoles = {
             team: "BUONI",
             info: "Non hanno alcun potere",
             objective: "Eliminare tutti i <span class=\"team-evil\">LUPI</span>"
+        },
+        8: {
+            name: "Otto di Bastoni",
+            role: "Appestato",
+            team: "NEUTRI",
+            info: "Quando un giocatore sceglie L'APPESTATO come bersaglio, verrà infettato e a sua volta potrà infettare gli altri giocatori con cui interagirà. Nel caso dei <span class=\"team-evil\">LUPI</span>, solo uno di questi verrà infettato secondo un criterio a scelta del Narratore (es. altezza, ordine alfabetico, ecc.)<br><br>Inoltre, la prima notte potrà indicare un giocatore da infettare.",
+            objective: "Infettare tutti i giocatori rimasti in vita, anche se L'APPESTATO è morto."
+        },
+        10: {
+            name: "Dieci di Bastoni",
+            role: "Profeta",
+            team: "NEUTRI",
+            info: "UNA VOLTA durante la discussione, può mandare un messaggio al Narratore indicando il nome di 3 giocatori (anche se morti) a cui viene associato un ruolo.<br><br>NON si può associare lo stesso ruolo a due giocatori diversi (es. si potrà associare il ruolo del <span class=\"team-evil\">LUPO</span> solo una volta a tentativo).",
+            objective: "Associare correttamente il ruolo di tutti e 3 i giocatori contemporaneamente.",
+            hasEasterEgg: true
         }
     },
     spade: {
@@ -157,12 +193,33 @@ const cardRoles = {
             info: "Non hanno alcun potere",
             objective: "Eliminare tutti i <span class=\"team-evil\">LUPI</span>"
         },
+        6: {
+            name: "Sei di Spade",
+            role: "Ricattatore",
+            team: "CATTIVI",
+            info: "Ogni volta che un <span class=\"team-evil\">LUPO</span> muore, sceglierà un bersaglio al quale bloccherà i poteri per una notte. Il bersaglio NON saprà di questo potere.<br><br>Il RICATTATORE verrà avvisato della morte di un lupo durante la notte tramite un messaggio da parte del Narratore.",
+            objective: "Vince insieme ai <span class=\"team-evil\">LUPI</span>."
+        },
         8: {
             name: "Otto di Spade",
             role: "Becchino",
             team: "BUONI",
             info: "UNA VOLTA PER DISCUSSIONE, fino ad un massimo di 2 VOLTE A PARTITA potrà dichiararsi girando la carta. Il Narratore gli consegnerà casualmente la metà delle carte dei giocatori eliminati nei turni precedenti.",
             objective: "Eliminare tutti i <span class=\"team-evil\">LUPI</span>"
+        },
+        9: {
+            name: "Nove di Spade",
+            role: "Boia",
+            team: "NEUTRI",
+            info: "La prima notte verrà svegliato dal Narratore il quale indicherà una VITTIMA.<br><br>Se la VITTIMA viene uccisa durante la notte, il <span class=\"team-neutral\">BOIA</span> diventa un <span class=\"team-neutral\">GIULLARE</span>.",
+            objective: "Deve far eliminare tramite VOTAZIONE la VITTIMA indicata."
+        },
+        10: {
+            name: "Dieci di Spade",
+            role: "Sandro",
+            team: "CATTIVI",
+            info: "I <span class=\"team-evil\">LUPI</span> conoscono la sua identità ma non viceversa.<br><br>Se SANDRO viene scelto come bersaglio, ucciderà chiunque l'abbia scelto.<br><br>Se viene votato fuori, i <span class=\"team-evil\">LUPI</span> non potranno usare i loro poteri nella notte successiva.<br><br>Se viene scelto come bersaglio dallo <span class=\"team-good\">SCERIFFO</span>, i <span class=\"team-evil\">LUPI</span> PERDONO LA PARTITA.",
+            objective: "Vince insieme ai <span class=\"team-evil\">LUPI</span>."
         }
     }
 };
@@ -187,6 +244,9 @@ function showCard(suit, value) {
     } else if (card.team === 'BUONI') {
         teamClass = 'team-good';
         roleClass = 'role-good';
+    } else if (card.team === 'NESSUNO') {
+        teamClass = 'team-grey';
+        roleClass = 'role-grey';
     }
     
     // Create overlay HTML with new structure
@@ -206,6 +266,12 @@ function showCard(suit, value) {
                     <h3 class="section-title">🎯 Obiettivo</h3>
                     <div class="section-content">${card.objective}</div>
                 </div>
+                
+                ${card.hasEasterEgg ? `
+                <button class="easter-egg-button" onclick="showEasterEgg(event)">
+                    Ma dov'è il profeta?
+                </button>
+                ` : ''}
                 
                 <button class="back-button" onclick="closeRoleCard()">
                     ← Torna al Tabellone
@@ -229,6 +295,36 @@ function closeRoleCard() {
     }
 }
 
+function showEasterEgg(event) {
+    event.stopPropagation();
+    
+    // Create easter egg overlay
+    const easterEggHTML = `
+        <div class="role-overlay" id="easterEggOverlay" onclick="closeEasterEgg()">
+            <div class="role-card team-neutral" onclick="event.stopPropagation()"> 
+                <div class="role-section">
+                    <div class="section-content" style="text-align: center; font-size: 1.5em; font-weight: bold; color: #f39c12;">
+                        MA PERCHÉ NON AIUTA?
+                    </div>
+                </div>
+                
+                <button class="back-button" onclick="closeEasterEgg()">
+                    Chiudi
+                </button>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', easterEggHTML);
+}
+
+function closeEasterEgg() {
+    const overlay = document.getElementById('easterEggOverlay');
+    if (overlay) {
+        overlay.remove();
+    }
+}
+
 // Add some visual feedback when cards are clicked
 document.addEventListener('DOMContentLoaded', function() {
     const cards = document.querySelectorAll('.card');
@@ -247,6 +343,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.classList.add('role-evil');
             } else if (roleData.team === 'NEUTRI') {
                 card.classList.add('role-neutral');
+            } else if (roleData.team === 'NESSUNO') {
+                card.classList.add('role-grey');
             }
         }
         
